@@ -1,8 +1,12 @@
-.App {
-  padding: 20px;
+.Container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+}
+
+.Item {
+  padding: 10px;
+  display: inline-table;
+  text-align: center;
 }
