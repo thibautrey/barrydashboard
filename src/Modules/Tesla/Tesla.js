@@ -15,7 +15,9 @@ const Tesla = () => {
     <div className="Tesla">
       <div className="Title">
         <img src="car.jpg" alt="car" />
-        <Typography variant="h5">Tesla charge managment</Typography>
+        <Typography variant="h5">
+          Tesla charge managment (NOT functionnal, fake data)
+        </Typography>
       </div>
       <Menu {...{ selectedMenu, setSelectedMenu }} />
       {selectedMenu === "car" && <Car />}
