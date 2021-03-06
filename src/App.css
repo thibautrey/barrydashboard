@@ -1,8 +1,20 @@
-.App {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+@media only screen and (min-width: 801px) {
+  .App {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .App {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
 }
