@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+.TitleButtons {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-column-gap: 5px;
+}
+
 @media only screen and (max-width: 1400px) {
   .Graph {
     display: grid;

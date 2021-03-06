@@ -56,11 +56,16 @@ const PriceGraph = () => {
               "dd/MM/yyyy"
             )} price graph`}
         </Typography>
-        <div>
-          <Button disabled={loading} onClick={subOrAddDays.bind(this, "sub")}>
+        <div className="TitleButtons">
+          <Button
+            variant="outlined"
+            disabled={loading}
+            onClick={subOrAddDays.bind(this, "sub")}
+          >
             Previous Day
           </Button>
           <Button
+            variant="outlined"
             onClick={subOrAddDays.bind(this, "add")}
             disabled={daySubstract >= 0 || loading}
           >
@@ -68,6 +73,7 @@ const PriceGraph = () => {
           </Button>
           {daySubstract !== 0 && (
             <Button
+              variant="outlined"
               onClick={subOrAddDays.bind(this, "today")}
               disabled={loading}
             >
