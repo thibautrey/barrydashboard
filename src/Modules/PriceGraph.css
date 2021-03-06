@@ -1,0 +1,29 @@
+.Graph {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+.GraphTitle {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-items: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .Graph {
+    display: grid;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .GraphTitle {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

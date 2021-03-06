@@ -7,6 +7,7 @@ import {
   endOfWeek,
   subMonths,
   subWeeks,
+  addDays,
 } from "date-fns";
 import { first, get } from "lodash";
 
@@ -14,9 +15,9 @@ const token = localStorage.getItem("token");
 
 const barryRootApi = "https://jsonrpc.barry.energy/json-rpc#";
 
-const getDateTimeFrames = () => [
-  `${format(new Date(), "yyyy-MM-dd")}T00:00:00Z`,
-  `${format(new Date(), "yyyy-MM-dd")}T23:59:59Z`,
+const getDateTimeFrames = (daySubstract) => [
+  `${format(addDays(new Date(), daySubstract), "yyyy-MM-dd")}T00:00:00Z`,
+  `${format(addDays(new Date(), daySubstract), "yyyy-MM-dd")}T23:59:59Z`,
 ];
 
 const getCurrentMonthTimeFrames = () => [
@@ -54,14 +55,24 @@ const barryRequest = ({ url, method, data }) =>
       jsonrpc: "2.0",
       ...data,
     },
-  }).then(({ data: { result } }) => result);
+  }).then(({ data: { result, error } }) => {
+    if (error && error.code === -32000) {
+      return new Promise((resolve) => {
+        window.setTimeout(() => {
+          resolve(barryRequest({ url, method, data }));
+        }, 5000);
+      });
+    } else {
+      return result;
+    }
+  });
 
-const getTicks = () =>
+const getTicks = ({ daySubstract }) =>
   barryRequest({
     url: `${barryRootApi}#Get Spotprice`,
     method: "POST",
     data: {
-      params: ["FR_EPEX_SPOT_FR", ...getDateTimeFrames()],
+      params: ["FR_EPEX_SPOT_FR", ...getDateTimeFrames(daySubstract)],
       method: "co.getbarry.api.v1.OpenApiController.getPrice",
     },
   });

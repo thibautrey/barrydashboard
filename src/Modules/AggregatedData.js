@@ -7,8 +7,8 @@ import {
   getAggregatedDataCurrentWeek,
   getAggregatedDataLastMonth,
   getAggregatedDataLastWeek,
-} from "./requests";
-import { sumAggregate } from "./utils";
+} from "../requests";
+import { sumAggregate } from "../utils";
 import "./AggregatedData.css";
 
 const AggregatedData = () => {

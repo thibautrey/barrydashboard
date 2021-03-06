@@ -1,12 +1,15 @@
 .Container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  height: 100%;
 }
 
 .Item {
-  padding: 10px;
-  display: inline-table;
+  display: grid;
   text-align: center;
+  height: 100%;
+  align-content: center;
 }
