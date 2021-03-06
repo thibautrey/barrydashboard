@@ -17,7 +17,7 @@ const defaultDashboardModules = [
 function App() {
   const [token, setToken] = useState("");
   const [tokenFound] = useState(localStorage.getItem("token"));
-  const [dashboardModules, setDashboardModules] = useState(
+  const [dashboardModules] = useState(
     localStorage.getItem("dashboardModules") || defaultDashboardModules
   );
 
