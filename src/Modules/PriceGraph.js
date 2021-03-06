@@ -71,7 +71,7 @@ const PriceGraph = () => {
             size={sizes.width > 1400 ? "medium" : "small"}
             variant="outlined"
             onClick={subOrAddDays.bind(this, "add")}
-            disabled={daySubstract >= 0 || loading}
+            disabled={daySubstract >= 1 || loading}
           >
             Next Day
           </Button>
