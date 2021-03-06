@@ -9,8 +9,7 @@ const Menu = ({ selectedMenu, setSelectedMenu }) => {
     <div className="ButtonsContainer">
       <Button
         size={sizes.width > 1400 ? "medium" : "small"}
-        variant="contained"
-        color="primary"
+        variant="outlined"
         disabled={selectedMenu === "schedule"}
         onClick={setSelectedMenu.bind(this, "schedule")}
       >
@@ -18,8 +17,7 @@ const Menu = ({ selectedMenu, setSelectedMenu }) => {
       </Button>
       <Button
         size={sizes.width > 1400 ? "medium" : "small"}
-        variant="contained"
-        color="primary"
+        variant="outlined"
         disabled={selectedMenu === "history"}
         onClick={setSelectedMenu.bind(this, "history")}
       >
@@ -27,8 +25,7 @@ const Menu = ({ selectedMenu, setSelectedMenu }) => {
       </Button>
       <Button
         size={sizes.width > 1400 ? "medium" : "small"}
-        variant="contained"
-        color="primary"
+        variant="outlined"
         disabled={selectedMenu === "car"}
         onClick={setSelectedMenu.bind(this, "car")}
       >
@@ -36,8 +33,7 @@ const Menu = ({ selectedMenu, setSelectedMenu }) => {
       </Button>
       <Button
         size={sizes.width > 1400 ? "medium" : "small"}
-        variant="contained"
-        color="primary"
+        variant="outlined"
         disabled={selectedMenu === "settings"}
         onClick={setSelectedMenu.bind(this, "settings")}
       >

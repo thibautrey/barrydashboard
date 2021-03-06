@@ -11,8 +11,8 @@ import Tesla from "./Modules/Tesla/Tesla";
 const defaultDashboardModules = [
   "PriceGraph",
   "Aggregated",
-  "Address",
   "Tesla",
+  "Address",
 ];
 
 function App() {
