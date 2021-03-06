@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { Button, Input, Typography } from "@material-ui/core";
 import { map } from "lodash";
 
@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <Fragment>
+    <div className="root">
       {tokenFound && (
         <div className="App">
           {map(
@@ -67,7 +67,7 @@ function App() {
           </div>
         </div>
       )}
-    </Fragment>
+    </div>
   );
 }
 

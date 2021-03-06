@@ -1,3 +1,10 @@
+.root {
+  display: flex;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  padding: 10px;
+}
+
 @media only screen and (min-width: 1400px) {
   .App {
     display: grid;
@@ -14,11 +21,20 @@
     grid-template-columns: 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .App .item {
   padding: 5px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .App .item {
+    padding: 0px;
+  }
 }
 
 .TokenContainer {

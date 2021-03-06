@@ -1,5 +1,5 @@
 .Tesla {
-  width: 100vw;
+  width: calc(100vw - 20px);
   overflow: hidden;
 }
 
@@ -7,6 +7,21 @@
   display: grid;
   grid-template-columns: max-content max-content;
   margin-bottom: 5px;
+  overflow: hidden;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 1400px) {
+  .Title {
+    grid-template-columns: max-content;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+  }
+
+  h6 {
+    font-size: 13px !important;
+  }
 }
 
 .Title img {
@@ -15,6 +30,7 @@
 
 .ButtonsContainer {
   display: grid;
+  width: 100%;
   grid-template-columns: max-content max-content max-content max-content;
   grid-column-gap: 5px;
   margin-bottom: 15px;

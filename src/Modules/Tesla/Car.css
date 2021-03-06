@@ -25,7 +25,25 @@
 
 .Car .status {
   height: 250px;
-  display: flex;
+  display: inline-flex;
   align-content: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .Car {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+  }
+
+  .Car .status {
+    width: 50px;
+    height: 100%;
+    display: block;
+    align-content: center;
+    justify-content: center;
+  }
 }

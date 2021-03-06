@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { each } from "lodash";
 
 const sumAggregate = (data) => {
@@ -8,4 +9,23 @@ const sumAggregate = (data) => {
   return Math.round(value);
 };
 
-export { sumAggregate };
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return windowSize;
+};
+
+export { sumAggregate, useWindowSize };
