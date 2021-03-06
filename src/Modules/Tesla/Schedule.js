@@ -23,6 +23,7 @@ const Schedule = () => {
               <TableCell align="right">Price per Kwh</TableCell>
               <TableCell align="right">Estimated charge</TableCell>
               <TableCell align="right">Estimated cost</TableCell>
+              <TableCell align="right"> </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

@@ -1,0 +1,31 @@
+.Car {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+}
+
+.Car img {
+  height: 350px;
+}
+
+.Car .carImage {
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Car .actions {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  grid-row-gap: 10px;
+  align-content: center;
+}
+
+.Car .status {
+  height: 250px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}

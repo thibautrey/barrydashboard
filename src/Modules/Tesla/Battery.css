@@ -1,0 +1,14 @@
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+section > svg {
+  width: 25vh;
+}
+section > div {
+  font-size: 4rem;
+  color: #73b504;
+}
