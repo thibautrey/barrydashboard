@@ -1,6 +1,8 @@
-.AddressCard {
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
+@media only screen and (max-width: 1400px) {
+  .AddressCard {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+  }
 }
 
 .Paper {

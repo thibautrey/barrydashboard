@@ -1,22 +1,22 @@
-.Tesla {
-  width: calc(100vw - 20px);
-  overflow: hidden;
-}
-
 .Title {
   display: grid;
   grid-template-columns: max-content max-content;
   margin-bottom: 5px;
   overflow: hidden;
-  width: 100vw;
 }
 
 @media only screen and (max-width: 1400px) {
+  .Tesla {
+    width: calc(100vw - 20px);
+    overflow: hidden;
+  }
+
   .Title {
     grid-template-columns: max-content;
     justify-content: center;
     align-content: center;
     justify-items: center;
+    width: 100vw;
   }
 
   h6 {
