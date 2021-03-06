@@ -1,9 +1,14 @@
 import { Button } from "@material-ui/core";
 
+import { useWindowSize } from "../../utils";
+
 const Menu = ({ selectedMenu, setSelectedMenu }) => {
+  const sizes = useWindowSize();
+
   return (
     <div className="ButtonsContainer">
       <Button
+        size={sizes.width > 1400 ? "medium" : "small"}
         variant="contained"
         color="primary"
         disabled={selectedMenu === "schedule"}
@@ -12,6 +17,7 @@ const Menu = ({ selectedMenu, setSelectedMenu }) => {
         Schedule
       </Button>
       <Button
+        size={sizes.width > 1400 ? "medium" : "small"}
         variant="contained"
         color="primary"
         disabled={selectedMenu === "history"}
@@ -20,6 +26,7 @@ const Menu = ({ selectedMenu, setSelectedMenu }) => {
         History
       </Button>
       <Button
+        size={sizes.width > 1400 ? "medium" : "small"}
         variant="contained"
         color="primary"
         disabled={selectedMenu === "car"}
@@ -28,6 +35,7 @@ const Menu = ({ selectedMenu, setSelectedMenu }) => {
         Manage Vehicule
       </Button>
       <Button
+        size={sizes.width > 1400 ? "medium" : "small"}
         variant="contained"
         color="primary"
         disabled={selectedMenu === "settings"}

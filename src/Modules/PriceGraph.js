@@ -7,11 +7,13 @@ import { Button, Typography } from "@material-ui/core";
 
 import { getTicks } from "../requests";
 import "./PriceGraph.css";
+import { useWindowSize } from "../utils";
 
 const PriceGraph = () => {
   const [ticks, setTicks] = useState([]);
   const [daySubstract, setDaySubstract] = useState(0);
   const [loading, setLoading] = useState(true);
+  const sizes = useWindowSize();
 
   const updateData = useCallback(() => {
     setLoading(true);
@@ -58,6 +60,7 @@ const PriceGraph = () => {
         </Typography>
         <div className="TitleButtons">
           <Button
+            size={sizes.width > 1400 ? "medium" : "small"}
             variant="outlined"
             disabled={loading}
             onClick={subOrAddDays.bind(this, "sub")}
@@ -65,6 +68,7 @@ const PriceGraph = () => {
             Previous Day
           </Button>
           <Button
+            size={sizes.width > 1400 ? "medium" : "small"}
             variant="outlined"
             onClick={subOrAddDays.bind(this, "add")}
             disabled={daySubstract >= 0 || loading}
@@ -73,6 +77,7 @@ const PriceGraph = () => {
           </Button>
           {daySubstract !== 0 && (
             <Button
+              size={sizes.width > 1400 ? "medium" : "small"}
               variant="outlined"
               onClick={subOrAddDays.bind(this, "today")}
               disabled={loading}
