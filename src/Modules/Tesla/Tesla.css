@@ -1,0 +1,19 @@
+.Tesla {
+}
+
+.Title {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  margin-bottom: 5px;
+}
+
+.Title img {
+  height: 35px;
+}
+
+.ButtonsContainer {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content;
+  grid-column-gap: 5px;
+  margin-bottom: 15px;
+}

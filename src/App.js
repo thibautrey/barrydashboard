@@ -6,6 +6,7 @@ import "./App.css";
 import PriceGraph from "./Modules/PriceGraph";
 import AddressCard from "./Modules/AddressCard";
 import AggregatedData from "./Modules/AggregatedData";
+import Tesla from "./Modules/Tesla/Tesla";
 
 const defaultDashboardModules = [
   "PriceGraph",
@@ -42,7 +43,7 @@ function App() {
                 case "Aggregated":
                   return <AggregatedData />;
                 case "Tesla":
-                  break;
+                  return <Tesla />;
                 case "Address":
                   return <AddressCard />;
                 default:
