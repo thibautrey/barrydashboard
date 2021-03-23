@@ -8,12 +8,7 @@ import AddressCard from "./Modules/AddressCard";
 import AggregatedData from "./Modules/AggregatedData";
 import Tesla from "./Modules/Tesla/Tesla";
 
-const defaultDashboardModules = [
-  "PriceGraph",
-  "Aggregated",
-  "Tesla",
-  "Address",
-];
+const defaultDashboardModules = ["PriceGraph", "Aggregated", "Address"];
 
 function App() {
   const [token, setToken] = useState("");
