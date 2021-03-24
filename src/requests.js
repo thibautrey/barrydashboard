@@ -10,8 +10,12 @@ import {
   addDays,
 } from "date-fns";
 import { first, get } from "lodash";
+import { isKindle } from "./utils";
 
-const token = localStorage.getItem("token");
+const token =
+  localStorage.getItem("token") ||
+  (isKindle &&
+    "P2lvlPB8oQCSZql60sAwH2Ntdu1GV7qp80jxZkvjiB4McxRNBvy2J0Lj643KYWuoOvY9XRtg6CgX8yA/eiDblLi1oPmheO+kDXejf1fdAYt8BQVFtB5iZIiis/UCpbMm8SJC/TdIYhsE+tRnvMMKHmc4HW6SH7VDoMBNxweRJvc=");
 
 const barryRootApi = "https://jsonrpc.barry.energy/json-rpc#";
 
